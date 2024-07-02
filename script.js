@@ -41,3 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000 + index * 500);
     });
 });
+
+// Burger Menu Toggle
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('showing');
+});
