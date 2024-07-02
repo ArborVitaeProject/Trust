@@ -22,7 +22,7 @@ header {
 
 header h1 {
     font-family: 'Cinzel', serif; /* Nautical rustic font */
-    font-size: 1.3em; /* Shrink the font size */
+    font-size: 2em; /* Shrink the font size */
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
 }
@@ -53,48 +53,6 @@ section h2 {
     border-bottom: 2px solid #8B4513;
     padding-bottom: 0.25em;
     margin-bottom: 0.5em;
-}
-
-/* List Styles */
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 5px;
-}
-
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label {
-    margin-top: 1em;
-}
-
-form input, form textarea {
-    width: 80%;
-    padding: 0.5em;
-    margin-top: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background: linear-gradient(90deg, #3B5998, #8B4513);
-    color: white;
-    border: none;
-    padding: 1em 2em;
-    margin-top: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #2E4A7D;
 }
 
 /* Footer Styles */

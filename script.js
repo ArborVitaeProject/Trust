@@ -10,7 +10,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 });
 
 // Contact Form Submission
-document.getElementById('contact-form').addEventListener('submit', function(e) {
+document.getElementById('contact-form')?.addEventListener('submit', function(e) {
     e.preventDefault();
     
     const name = document.getElementById('name').value;
@@ -25,7 +25,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 
 // Fancy Effects
 document.addEventListener('DOMContentLoaded', () => {
-    const hero = document.querySelector('.hero');
+    const hero = document.querySelector('header');
     hero.style.opacity = 0;
     setTimeout(() => {
         hero.style.transition = 'opacity 2s';
@@ -40,12 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
             section.style.opacity = 1;
         }, 1000 + index * 500);
     });
-});
-
-// Burger Menu Toggle
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.getElementById('nav-links');
-
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('showing');
 });
