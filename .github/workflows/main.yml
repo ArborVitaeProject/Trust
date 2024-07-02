@@ -1,0 +1,26 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Set this to the name of your default branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Pages
+      uses: actions/setup-pages@v1
+
+    - name: Deploy
+      run: |
+        echo "Deploying to GitHub Pages..."
+        # Add any custom build steps here
+        echo "<html><body><h1>My GitHub Page</h1></body></html>" > index.html
+        git add index.html
+        git commit -m "Deploy to GitHub Pages"
+        git push
