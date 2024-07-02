@@ -11,7 +11,7 @@ body {
 header {
     background: linear-gradient(90deg, #4CAF50, #8BC34A);
     color: white;
-    padding: 1em 0;
+    padding: 1em 0.5em;
     text-align: center;
     position: sticky;
     top: 0;
@@ -22,21 +22,24 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1em;
+    margin: 0.5em;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 0.5em 1em;
 }
 
 /* Section Styles */
 section {
-    padding: 2em 5%;
+    padding: 15em 5%;
     text-align: left;
     background-color: #FFF;
     margin-bottom: 1em;
@@ -49,7 +52,7 @@ section:nth-child(odd) {
 section h2 {
     color: #388E3C;
     border-bottom: 2px solid #388E3C;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.25em;
 }
 
 /* List Styles */
@@ -58,7 +61,7 @@ ul {
 }
 
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* Form Styles */
@@ -100,4 +103,31 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+
+    nav ul li a {
+        padding: 0.5em;
+    }
+
+    section {
+        padding: 1em 5%;
+    }
+
+    section h2 {
+        padding-bottom: 0.25em;
+    }
 }
