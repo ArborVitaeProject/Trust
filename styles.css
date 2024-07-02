@@ -22,7 +22,7 @@ header {
 
 header h1 {
     font-family: 'Cinzel', serif; /* Nautical rustic font */
-    font-size: 2em; /* Shrink the font size */
+    font-size: 1.7em; /* Shrink the font size */
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
 }
