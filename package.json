@@ -1,0 +1,11 @@
+{
+  "name": "Trust",
+  "version": "1.0.0",
+  "description": "The Trust of Arbor Vitae Improvement Plan",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Building project...' && exit 0"
+  },
+  "author": "",
+  "license": "ISC"
+}
