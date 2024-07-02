@@ -32,12 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
         hero.style.opacity = 1;
     }, 500);
     
-    const trusteeCards = document.querySelectorAll('.trustee-card');
-    trusteeCards.forEach((card, index) => {
-        card.style.opacity = 0;
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+        section.style.opacity = 0;
         setTimeout(() => {
-            card.style.transition = 'opacity 1s';
-            card.style.opacity = 1;
+            section.style.transition = 'opacity 1s';
+            section.style.opacity = 1;
         }, 1000 + index * 500);
     });
 });
