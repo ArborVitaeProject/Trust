@@ -9,67 +9,48 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    background: linear-gradient(90deg, #3B5998, #8B4513);
     color: white;
-    padding: 1em 0.5em;
+    padding: 2em 0.5em;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 4px solid #8B4513;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-nav {
-    position: relative;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
+header h1 {
+    font-size: 2.5em;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0.5em;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5em 1em;
 }
 
 /* Section Styles */
 section {
-    padding: 1.5em 5%;
+    padding: 2em 5%;
     text-align: left;
     background-color: #FFF;
-    margin-bottom: 1em;
+    margin: 1em 5%;
+    border: 2px solid #3B5998;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 section:nth-child(odd) {
-    background: linear-gradient(90deg, #F1F8E9, #DCEDC8);
+    background: linear-gradient(90deg, #E9ECEF, #F8F9FA);
 }
 
 section h2 {
-    color: #388E3C;
-    border-bottom: 2px solid #388E3C;
+    color: #8B4513;
+    border-bottom: 2px solid #8B4513;
     padding-bottom: 0.25em;
+    margin-bottom: 0.5em;
 }
 
 /* List Styles */
@@ -101,7 +82,7 @@ form input, form textarea {
 }
 
 form button {
-    background: linear-gradient(90deg, #388E3C, #4CAF50);
+    background: linear-gradient(90deg, #3B5998, #8B4513);
     color: white;
     border: none;
     padding: 1em 2em;
@@ -111,42 +92,15 @@ form button {
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: #2E4A7D;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #3B5998;
     color: white;
     text-align: center;
     padding: 1em 0;
-}
-
-/* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul.showing {
-        display: flex;
-    }
-
-    nav ul li {
-        width: 100%;
-        margin: 0;
-    }
-
-    nav ul li a {
-        padding: 1em;
-        width: 100%;
-        display: block;
-    }
+    border-top: 4px solid #8B4513;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
