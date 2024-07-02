@@ -7,8 +7,9 @@ body {
     color: #333;
 }
 
+/* Header Styles */
 header {
-    background-color: #4CAF50;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
     color: white;
     padding: 1em 0;
     text-align: center;
@@ -20,6 +21,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -32,43 +34,34 @@ nav ul li a {
     text-decoration: none;
 }
 
-.hero {
-    background-image: url('hero.jpg');
-    background-size: cover;
-    color: white;
-    padding: 5em 0;
-    text-align: center;
-}
-
+/* Section Styles */
 section {
     padding: 2em 5%;
     text-align: left;
+    background-color: #FFF;
+    margin-bottom: 1em;
+}
+
+section:nth-child(odd) {
+    background: linear-gradient(90deg, #F1F8E9, #DCEDC8);
 }
 
 section h2 {
-    color: #4CAF50;
+    color: #388E3C;
+    border-bottom: 2px solid #388E3C;
+    padding-bottom: 0.5em;
 }
 
-.trustees {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+/* List Styles */
+ul {
+    padding-left: 20px;
 }
 
-.trustee-card {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 1em;
-    width: 30%;
-    margin: 1em;
-    transition: transform 0.3s;
+ul li {
+    margin-bottom: 10px;
 }
 
-.trustee-card:hover {
-    transform: scale(1.05);
-}
-
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -88,7 +81,7 @@ form input, form textarea {
 }
 
 form button {
-    background-color: #4CAF50;
+    background: linear-gradient(90deg, #388E3C, #4CAF50);
     color: white;
     border: none;
     padding: 1em 2em;
@@ -101,17 +94,10 @@ form button:hover {
     background-color: #45a049;
 }
 
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1em 0;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
 }
