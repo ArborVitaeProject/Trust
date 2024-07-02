@@ -1,17 +1,44 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.addEventListener('click', function() {
-            this.classList.toggle('expanded');
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
 });
 
-// Add some interactive animations
-const header = document.querySelector('header');
-header.addEventListener('mouseover', function() {
-    header.style.backgroundColor = '#3cb371';
+// Contact Form Submission
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    alert(`Thank you, ${name}! Your message has been received.`);
+    
+    // Clear form
+    document.getElementById('contact-form').reset();
 });
-header.addEventListener('mouseout', function() {
-    header.style.backgroundColor = '#2e8b57';
+
+// Fancy Effects
+document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.querySelector('.hero');
+    hero.style.opacity = 0;
+    setTimeout(() => {
+        hero.style.transition = 'opacity 2s';
+        hero.style.opacity = 1;
+    }, 500);
+    
+    const trusteeCards = document.querySelectorAll('.trustee-card');
+    trusteeCards.forEach((card, index) => {
+        card.style.opacity = 0;
+        setTimeout(() => {
+            card.style.transition = 'opacity 1s';
+            card.style.opacity = 1;
+        }, 1000 + index * 500);
+    });
 });
+
