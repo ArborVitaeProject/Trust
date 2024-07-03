@@ -59,6 +59,8 @@ nav ul li a:focus {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     min-width: 160px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .dropdown-content a {
@@ -112,4 +114,39 @@ footer {
     padding: 1em 0;
     border-top: 4px solid #8B4513;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .dropdown-content a {
+        padding: 0.5em 1em;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        position: relative;
+    }
+
+    header {
+        padding: 1em 0.5em;
+    }
+
+    section {
+        padding: 1em 3%;
+        margin: 1em 3%;
+    }
 }
