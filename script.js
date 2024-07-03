@@ -5,7 +5,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         if (href.startsWith('#')) {
             e.preventDefault();
             const targetElement = document.querySelector(href);
-            const offset = window.innerWidth < 768 ? 200 : 165; // Adjust the offset for mobile and desktop
+            const offset = window.innerWidth < 768 ? 165 : 165; // Adjust the offset for mobile and desktop
             const elementPosition = targetElement.getBoundingClientRect().top;
             const offsetPosition = elementPosition - offset;
 
