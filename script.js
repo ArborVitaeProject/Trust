@@ -5,7 +5,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         if (href.startsWith('#')) {
             e.preventDefault();
             const targetElement = document.querySelector(href);
-            const offset = window.innerWidth < 768 ? 165 : 165; // Adjust the offset for mobile and desktop
+            const offset = window.innerWidth < 768 ? 125 : 165; // Adjust the offset for mobile and desktop
             const elementPosition = targetElement.getBoundingClientRect().top;
             const offsetPosition = elementPosition - offset;
 
@@ -13,8 +13,50 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
                 top: offsetPosition,
                 behavior: 'smooth'
             });
+
+            // Close the dropdown menu if a link is clicked
+            closeDropdown();
         }
     });
+});
+
+// Function to close dropdown menu
+function closeDropdown() {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent) {
+        dropdownContent.style.display = 'none';
+    }
+}
+
+// Function to toggle dropdown menu
+function toggleDropdown() {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent) {
+        if (dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+        } else {
+            dropdownContent.style.display = 'block';
+        }
+    }
+}
+
+// Add event listener to the dropdown button
+document.querySelector('.dropbtn').addEventListener('click', function(e) {
+    e.stopPropagation();
+    toggleDropdown();
+});
+
+// Close the dropdown menu if clicking outside of it
+document.addEventListener('click', function(e) {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (dropdownContent && !e.target.closest('.dropdown')) {
+        dropdownContent.style.display = 'none';
+    }
+});
+
+// Prevent closing the dropdown menu when clicking inside it
+document.querySelector('.dropdown-content').addEventListener('click', function(e) {
+    e.stopPropagation();
 });
 
 // Contact Form Submission
