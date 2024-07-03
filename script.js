@@ -4,9 +4,18 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         const href = this.getAttribute('href');
         if (href.startsWith('#')) {
             e.preventDefault();
-            document.querySelector(href).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetElement = document.querySelector(href);
+
+            if (targetElement) {
+                const navHeight = document.querySelector('nav').offsetHeight;
+                const bufferOffset = 140; // Adjust this value as needed
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight - bufferOffset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 });
