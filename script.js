@@ -5,11 +5,11 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         if (href.startsWith('#')) {
             e.preventDefault();
             const targetElement = document.querySelector(href);
-            const offset = window.innerWidth < 768 ? 50 : 165; // Adjust the offset for mobile and desktop
-            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offset = window.innerWidth < 768 ? 80 : 165; // Adjust the offset for mobile and desktop
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
             const offsetPosition = elementPosition - offset;
 
-            window.scrollBy({
+            window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
             });
